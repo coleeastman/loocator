@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loocator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Loocator</h1>
+    </header>    
+    <div id="main-container">
+        <div class="container" id="info-container">
+            <h1 class="bathroom-title1" id="bathroom-title1">Introducing Loocator</h1>
+            <p class="grey">
+                Arizona State University's bathroom review and locator website. Find the closest and best-reviewed 
+                bathrooms on campus in just a few clicks. Designed for students, faculty, and visitors. Click on a marker 
+                on the map to start.
+            </p>
+            <div id="toilet-container">
+                <img src="images/toilet.png" class="icons" alt="Toliet Icon">
+                <div id="num-toilets-1" class="grey">Toilets</div>
+            </div>
+            <div id="urinal-container">
+                <img src="images/urinal.png" class="icons" alt="Urinal Icon">
+                <div id="num-urinals-1" class="grey">Urinals</div>
+            </div>
+            <div id="sink-container">
+                <img src="images/sink.png" class="icons" alt="Sink Icon">
+                <div id="num-sinks-1" class="grey">Sinks</div>
+            </div>
+            <div id="cleaniness-container">
+                <img src="images/sparkle.png" class="icons" alt="Sparkle Icon">
+                <div id="cleaniness-rating-1" class="grey">Cleaniness</div>
+            </div>
+            <div id="popularity-container">
+                <img src="images/people.png" class="icons" alt="People Icon">
+                <div id="popularity-rating-1" class="grey">Popularity</div>
+            </div>
+        </div>
+        <div class="container" id="bathroom-container" style="display: none">
+            <h1 class="bathroom-title" id="bathroom-title">Bathroom Title</h1>
+            <!-- <p class="bathroom-description" id="bathroom-description">Bathroom Description</p> -->
+            <div id="toilet-container">
+                <img src="images/toilet.png" class="icons" alt="Toliet Icon">
+                <div id="num-toilets" class="grey">0</div>
+            </div>
+            <div id="urinal-container">
+                <img src="images/urinal.png" class="icons" alt="Urinal Icon">
+                <div id="num-urinals" class="grey">0</div>
+            </div>
+            <div id="sink-container">
+                <img src="images/sink.png" class="icons" alt="Sink Icon">
+                <div id="num-sinks" class="grey">0</div>
+            </div>
+            <div id="cleaniness-container">
+                <img src="images/sparkle.png" class="icons" alt="Sparkle Icon">
+                <div id="cleaniness-rating" class="grey">0</div>
+            </div>
+            <div id="popularity-container">
+                <img src="images/people.png" class="icons" alt="People Icon">
+                <div id="popularity-rating" class="grey">0</div>
+            </div>
+        </div>
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Loocator, All rights reserved.</p>
+            <span class="separator">|</span>
+            <div class="version">Version 1.0.0</div>
+            <span class="separator">|</span>
+            <a href="mailto:coleeastman91@gmail.com">Contact</a>
+        </div>
+    </footer>    
+    <script src="script.js"></script> 
+</body>
+</html>
+

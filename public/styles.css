@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;  
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    text-align: center;
+    background-color: rgb(250,250,250);
+    font-size: 1.25rem;
+}
+
+
+#main-container {
+    display: flex;
+    justify-content: flex;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    background-color: rgb(250,250,250);
+}
+
+#info-container,
+#bathroom-container {
+    width: 40%;
+    padding-top: 5%;
+    font-size: 1.25rem;
+    padding-right: 2.5%;
+}
+
+#map-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2.5%;
+}
+
+#map {
+    height: 525px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#toilet-container,
+#urinal-container,
+#sink-container,
+#cleaniness-container,
+#popularity-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#toilet-container img.icons,
+#urinal-container img.icons,
+#sink-container img.icons,
+#cleaniness-container img.icons,
+#popularity-container img.icons {
+    margin-right: 16px;
+}
+
+
+.icons {
+    width: 30px;
+    height: 30px;
+}
+
+.icons:hover {
+    transform: scale(1.20);
+}
+
+.grey {
+    color: #333333;
+}
+
+footer {
+    background-color: rgb(250, 250, 250);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.8em;
+}
+
+.footer-content {
+    display: inline-block; /* or 'flex' if you prefer */
+}
+
+.footer-content a,
+.footer-content .version,
+.footer-content p {
+    display: inline; /* display inline for a horizontal layout */
+    margin: 0 10px; /* spacing between elements */
+    text-decoration: none;
+    color: #333333;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 1000px) {
+    #main-container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    #info-container,
+    #bathroom-container {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1em 2.5% 1em 2.5%;
+        text-align: left;
+    }
+
+    #map-container {
+        width: 100%;
+        padding: 0 2.5%;
+        box-sizing: border-box;
+    }
+
+    #map {
+        height: 50vh;
+        width: 100%;
+    }
+}
+
