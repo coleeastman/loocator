@@ -4,7 +4,7 @@ const app = express();
 const port = 3000;
 
 // Serve static files from the 'public' directory
-app.use(express.static('public'));
+app.use(express.static('docs'));
 
 // Endpoint to get the API key
 app.get('/api/key', (req, res) => {
