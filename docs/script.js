@@ -109,6 +109,7 @@ function replaceContainer() {
 }
 
 function updateContainerContent(marker) {
+    var navTitle = document.getElementById('nav-bathroom-title');
     var title = document.getElementById('bathroom-title');
     var toilets = document.getElementById('num-toilets');
     var urinals = document.getElementById('num-urinals');
@@ -116,6 +117,7 @@ function updateContainerContent(marker) {
     var cleaniness = document.getElementById('cleaniness-rating');
     var popularity = document.getElementById('popularity-rating');
 
+    navTitle.textContent = marker.title;
     title.textContent = marker.title;
     toilets.textContent = marker.toilets;
     urinals.textContent = marker.urinals;
@@ -123,7 +125,6 @@ function updateContainerContent(marker) {
     cleaniness.textContent = marker.cleaniness + "/10";
     popularity.textContent = marker.popularity + "/10";
 }
-
 
 // IDEAS GOING FOWARD
 

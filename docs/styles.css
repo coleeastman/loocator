@@ -1,52 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
 body {
-    font-family: 'Open Sans', sans-serif;  
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     height: 100vh;
+    background-color: rgb(255,255,255);
 }
 
 header {
     text-align: center;
-    background-color: rgb(250,250,250);
-    font-size: 1.25rem;
+    background-color: rgb(255,255,255);
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
 }
-
 
 #main-container {
-    display: flex;
-    justify-content: flex;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 5%;
-    background-color: rgb(250,250,250);
+    background-color: rgb(255, 255, 255);
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    box-shadow: 0 0px 12px rgba(0, 0, 00, 0.1); /* Shadow effect */
+    display: flex; /* Enables flexbox layout */
+    align-items: flex-start; /* Aligns children to the start of the cross axis */
 }
 
-#info-container,
-#bathroom-container {
-    width: 40%;
-    padding-top: 5%;
-    font-size: 1.25rem;
-    padding-right: 2.5%;
+.purple {
+    color: #5524fd;
+}
+
+.container {
+    padding-top: 50px;
+    padding-bottom: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    height: 535px; /* adjust from 525px for 50px top padding */
+    width: 50%;
+}
+
+nav a {
+    color: black;
+    padding-right: 10px;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    align-items: center;
+    font-size: 0.75rem;
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+    display: inline-block;
+    transition: transform 0.35s ease;
+}
+
+a {
+    align-items: center;
+    font-size: 0.75rem;
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+    display: inline-block;
+    transition: transform 0.35s ease;
+}
+
+#about-link:hover,
+#contact-link:hover,
+#github-link:hover {
+    transform: scale(1.15);
+}
+
+.grey {
+    color: #A9A9A9;
+}
+
+#description {
+    line-height: 1.8;
 }
 
 #map-container {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 2.5%;
+    flex-grow: 1; /* Takes up the remaining space */
+    width: 50%; /* Adjusts the width dynamically based on the width of bathroom-container */
+    /* other styles for map-container */
 }
 
 #map {
-    height: 525px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 585px;
+    /* height: 100%;
+    width: 100%; */
+}
+
+.icons {
+    width: 30px;
+    height: 30px;
 }
 
 #toilet-container,
@@ -68,35 +118,22 @@ header {
 }
 
 
-.icons {
-    width: 30px;
-    height: 30px;
-}
-
-.icons:hover {
-    transform: scale(1.20);
-}
-
-.grey {
-    color: #333333;
-}
 
 footer {
-    background-color: rgb(250, 250, 250);
     text-align: center;
-    padding: 20px 0;
+    padding: 35px 0;
     font-size: 0.8em;
 }
 
 .footer-content {
-    display: inline-block; /* or 'flex' if you prefer */
+    display: inline-block;
 }
 
 .footer-content a,
 .footer-content .version,
 .footer-content p {
-    display: inline; /* display inline for a horizontal layout */
-    margin: 0 10px; /* spacing between elements */
+    display: inline;
+    margin: 0 10px;
     text-decoration: none;
     color: #333333;
 }
@@ -106,7 +143,7 @@ footer {
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     #main-container {
         flex-direction: column-reverse;
         align-items: center;
@@ -116,13 +153,11 @@ footer {
     #bathroom-container {
         width: 100%;
         box-sizing: border-box;
-        padding: 1em 2.5% 1em 2.5%;
         text-align: left;
     }
 
     #map-container {
         width: 100%;
-        padding: 0 2.5%;
         box-sizing: border-box;
     }
 
@@ -131,4 +166,42 @@ footer {
         width: 100%;
     }
 }
+
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #cccccc; /* Light grey border */
+    padding: 5px 15px; /* Padding around the search box */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 300px; /* Maximum width of the search box */
+    border-radius: 2px;
+}
+
+.search-box input[type="search"] {
+    border: none; /* No border for the input */
+    outline: none; /* Remove the outline on focus */
+    padding: 10px; /* Space inside the input */
+    margin-right: 10px; /* Space between the input and the icon */
+    flex-grow: 1; /* Let the input grow to fill space */
+}
+
+/* Styling for the search icon */
+.search-icon {
+    cursor: pointer;
+    color: #333333; /* Color for the icon */
+    font-size: 18px; /* Size of the icon */
+}
+
+/* Placeholder styling */
+.search-box input::placeholder {
+    color: #aaaaaa; /* Light grey color for placeholder text */
+}
+
+/* For focus state */
+.search-box input[type="search"]:focus {
+    outline: none;
+    box-shadow: none; /* If you don't want any focus indication */
+}
+
 
