@@ -204,4 +204,7 @@ footer {
     box-shadow: none; /* If you don't want any focus indication */
 }
 
+.red {
+    color: red;
+}
 
