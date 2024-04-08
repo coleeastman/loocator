@@ -211,7 +211,10 @@ footer {
 .search-box input[type="search"]:focus {
     outline: none;
     box-shadow: none; /* If you don't want any focus indication */
-<<<<<<< HEAD
+}
+
+.red {
+    color: red;
 }
 
 
